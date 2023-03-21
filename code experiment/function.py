@@ -5,7 +5,7 @@ def python_project(filepath= "D:\python file\members.txt"):
     return text
 
 
-def write_todos(filepath,text):
+def write_todos(text,filepath="D:\python file\members.txt"):
     with open(filepath,"w") as file:
         file.writelines(text)
 

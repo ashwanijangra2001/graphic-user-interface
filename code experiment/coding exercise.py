@@ -1,18 +1,23 @@
+import function
 import PySimpleGUI as sg
 
-label1 = sg.Text("select the compressed file:")
-input1 = sg.Input(tooltip='choose file')
-button1 = sg.FileBrowse("choose")
+label1 = sg.Text("type a text:")
+input1 = sg.Input(tooltip='enter text', key='text')
+button1 = sg.Button('add')
 
-label2 = sg.Text("select the destination file:")
-input2 = sg.Input(tooltip='destination file')
-button2 = sg.FolderBrowse("choose")
+window = sg.Window("my text app", layout= [[label1,input1,button1]],font=15)
 
-compressor_button = sg.Button("compressor")
+while True:
+    item , value =  window.read()
+    print(item)
+    print(value)
+    match item:
+        case'add':
+            todo = function.python_project()
+            new_todo = value['text'] + '\n'
+            todo.append(new_todo)
+            function.write_todos(todo)
+        case sg.WIN_CLOSED:
+            break
 
-window = sg.Window('compressor',[[label1,input1,button1],
-                                 [label2,input2,button2],
-                                 [compressor_button]])
-
-window.read()
 window.close()
