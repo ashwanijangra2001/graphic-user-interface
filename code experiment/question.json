@@ -1,0 +1,7 @@
+[{"question_text":"what are dolphins?",
+  "Alternative":["amphibians","fish","mammals","animals"],
+  "correct_answer":3},
+{"question_text":"what occupies the most surface of the earth?",
+  "Alternative":["land","water"],
+  "correct_answer":2}]
+

@@ -23,7 +23,7 @@ while True:
             new_todo = values['text'] + '\n'
             todo.append(new_todo)
             function.write_todos(todo)
-            window['texts'].update(values['text'])
+            window['texts'].update(values=todo)
         case'Edit':
             todo_to_edit = values['texts'][0]
             new_todo = values['text']
@@ -32,7 +32,7 @@ while True:
             index = todo.index(todo_to_edit)
             todo[index] = new_todo
             function.write_todos(todo)
-            window['texts'].update(values= todo)
+            window['texts'].update(values=todo)
         case'texts':
             window['text'].update(value=values['texts'][0])
         case sg.WIN_CLOSED:
