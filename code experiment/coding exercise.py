@@ -1,6 +1,11 @@
 import function
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists('D:\python file\members.txt'):
+    with open('D:\python file\members.txt', 'w')as file:
+        pass
 
 sg.theme("black")
 clock = sg.Text(" ", key='clock')
@@ -22,7 +27,7 @@ window = sg.Window("My Text App", layout=[[clock], [label1, input1, button1],
                     [exit_button]], font=(20))
 
 while True:
-    event, values = window.read(timeout=100)
+    event, values = window.read(timeout=10)
     window['clock'].update(value= time.strftime("%b %d ,%Y   %H:%M:%S"))
     match event:
         case'Add':
