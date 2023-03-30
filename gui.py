@@ -15,8 +15,9 @@ button1 = sg.Button(size=4, image_source=r"D:\python file\add.png",
                     mouseover_colors="lightBlue",
                     tooltip='add item', key='Add')
 edit_button = sg.Button("Edit")
-list_box = sg.Listbox(values=function.python_project(),key= 'texts',enable_events=True,
-                      size=[55,12])
+list_box = sg.Listbox(values=function.python_project(), key='texts', enable_events=True,
+                      size=[55, 12])
+
 edit_button = sg.Button("Edit")
 complete_button = sg.Button(image_source="D:\python file\complete.png",
                             mouseover_colors="lightBlue",key="Complete")
