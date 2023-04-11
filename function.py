@@ -1,6 +1,5 @@
 Filepath = "D:\python file\members.txt"
 
-
 def python_project(filepath= Filepath):
     """read the file and return the list of present data """
     with open(filepath, 'r')as file:
@@ -9,7 +8,7 @@ def python_project(filepath= Filepath):
 
 
 def write_todos(text, filepath= Filepath):
-    with open(filepath, "w") as file:
+    with open(filepath, 'w') as file:
         file.writelines(text)
 
 
